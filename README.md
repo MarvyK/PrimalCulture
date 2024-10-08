@@ -1,4 +1,4 @@
-Primal Culture Tattoo Studio - Website Project
+**Primal Culture Tattoo Studio - Website Project**
 
 Author(s):
 Marvin Poole, on behalf of Samford Solutions (PTY)Ltd 
