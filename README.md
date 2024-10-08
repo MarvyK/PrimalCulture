@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://primalculture.co.za/PrimalCulture.png" width="300" height="356">
+</p>
+
 # Primal Culture Tattoo Studio - Website Project
 ***Description:***
 
@@ -15,7 +19,7 @@ Showcasing artwork from your talented artists, Clinton Naidoo. Allow clients to 
 
 ***Cloning the Repository:***
 
-```bash
+```
 git clone https://github.com/MarvyK/PrimalCulture.git
 ```
 
@@ -42,9 +46,8 @@ Please make sure to update tests as appropriate.
 
 
 ## Author(s)
-Marvin Poole, on behalf of [Samford Solutions (PTY)Ltd](https://www.samford.co.za)
+Marvin Poole, on behalf of [**Samford Solutions (PTY)Ltd**](https://www.samford.co.za) [<img src="https://samford.co.za/images/Samford---220-shadow.png" width="36" height="28"  />](https://www.samford.co.za)
 
-GitHub: [GitHub/MarvyK](https://github.com/MarvyK)
+GitHub: [**MarvyK**](https://github.com/MarvyK)
 
-
-<img src="https://img.shields.io/badge/HTML%20Academy-302683?style=for-the-badge&logo=HTML%20Academy&logoColor=white" />    
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black" /> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
