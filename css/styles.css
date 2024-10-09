@@ -10,8 +10,8 @@
   
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('/fonts/moolbor.ttf') format('woff2'),
-         url('/fonts/moolbor.ttf') format('woff');
+    src: url('../fonts/moolbor.ttf') format('woff2'),
+         url('../fonts/moolbor.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
   } 
@@ -56,7 +56,7 @@
         right: 0px;
         bottom: 0px;
         left: 0px;        
-        background-image: url('/images/PrimalCulture.png');
+        background-image: url('../images/PrimalCulture.png');
         background-repeat: repeat;
         background-position: center center;
         background-size: 100px 100px;
