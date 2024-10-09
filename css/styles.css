@@ -32,7 +32,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;  
-    
+    /* min-height: 100vh;   */
+    overflow: auto;
   }
   
   .grid {
@@ -40,9 +41,9 @@
     justify-content: center;
     align-items: center;
     border: 2px solid var(--primary-color); /* Adjust the border style, width, and color as needed */
-    max-width: 80%; /* Adjust the width as needed */
-    height: auto; /* Adjust the height as needed */
-    margin-top: 1%;
+    /* max-width: 80%; Adjust the width as needed */
+    /* height: auto; Adjust the height as needed */
+    /* margin-top: 1%; */
     flex-wrap: wrap;
     flex-grow: 1;
     &::before {
@@ -67,8 +68,8 @@
     flex-grow: 1;
     padding: 20px; /* Adjust the padding as needed */
     border: 0px solid gray; /* Adjust the border style, width, and color as needed */
-    max-width: 400px; /* Set a specific width for the grid item */
-    max-height: 475px; /* Set a specific height for the grid item */
+    max-width: 502px; /* Set a specific width for the grid item */
+    max-height: 607px; /* Set a specific height for the grid item */
     
     align-content: flex-start;
     
@@ -93,7 +94,7 @@
     max-height: 75%;
     object-fit: contain;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -138,11 +139,13 @@
   .footer-container {
   padding: 20px;
   z-index: 10000;
-  position: fixed;
-  bottom: 0;
+  position: sticky;
+  /* bottom: 0; */
   left: 0;
   right: 0;
   background-color: var(--bg-color); /* Adjust background color as needed */
+  margin-top: 50px;
+    
 }
 .footer-container-item {
   display: flex;
@@ -175,7 +178,7 @@
     font-size: 24px; /* Adjust font size as needed */
     margin: 10px; /* Adjust margin as needed */
   }
-  .bigger {font-size: 32px;}
+  .bigger {font-size: 24px;}
   .footer-container code {
     text-align: center;
     display: block; /* Ensure the code element behaves like a block-level element */
@@ -192,6 +195,7 @@
     flex: 2; /* Make this item twice as wide */
   }
   .samford-img {max-width: 10%;}
+  
   
   @media (max-width: 600px) {
     .footer-container-item {

@@ -8,13 +8,14 @@
 // function pauseAud() { 
 //   aud.pause(); 
 // } 
-var losAudio = document.getElementById("losAudio");
+
+var bobbleAudio = document.getElementById("bobbleAudio");
 var playPauseButton = document.getElementById("btn_playPause");
 
-function losAudio_playPause() {
-    var isPaused = losAudio.paused;
-    losAudio[isPaused ? "play" : "pause"]();
-    playPauseButton.innerHTML = '<i class="fa ' + (isPaused ? 'fa-music' : 'fa-pause') + ' bigger"></i>';
+function bobbleAudio_playPause() {
+    var isPaused = bobbleAudio.paused;
+    bobbleAudio[isPaused ? "play" : "pause"]();
+    playPauseButton.innerHTML = '<i class="fa ' + (isPaused ? 'fa-music' : 'fa-pause') + ' fa-beat" style="--fa-beat-scale: 2""></i>';
 }
 
-playPauseButton.addEventListener("click", losAudio_playPause);
+playPauseButton.addEventListener("click", bobbleAudio_playPause);
