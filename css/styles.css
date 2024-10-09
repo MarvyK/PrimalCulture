@@ -29,13 +29,15 @@
     font-size: var(--font-size);
     color: var(--primary-color);
     background-color: var(--bg-color);
+   
   }
 
   .container {
     display: flex; /* Ensure the parent container has flexbox layout */
     justify-content: center;
     align-items: center;
-    min-height: 400px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;  
     
   }
   
@@ -134,8 +136,12 @@
     width: 100%;
     background-color: #1b1b1b;
     z-index: 10000;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     margin: 10px 0 0 0;
+    top: 90vh;
+    
+    
+    text-align: center;
   }
 .footer h1 {text-align: center; margin: 20px 0 0 0;}
 .fa-user {
@@ -163,3 +169,4 @@
     background: none;
     cursor: pointer;
     padding: 0;}
+.music-box{position: absolute;}    
