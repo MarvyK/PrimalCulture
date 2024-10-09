@@ -1,0 +1,165 @@
+/*
+
+#F5C507
+#CBC3C3
+
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/moolbor.ttf') format('woff2'),
+         url('/fonts/moolbor.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  } 
+  
+:root {
+    --primary-color: #F5C507;
+    --secondary-color: #CBC3C3;
+    --bg-color: #1b1b1b;
+    --font-family: 'MyCustomFont',Arial, sans-serif;
+    --font-size: 16px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+  }
+
+  .container {
+    display: flex; /* Ensure the parent container has flexbox layout */
+    justify-content: center;
+    align-items: center;
+    min-height: 400px; /* Adjust the height as needed */
+    
+  }
+  
+  .grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-color); /* Adjust the border style, width, and color as needed */
+    max-width: 80%; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    margin-top: 1%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;        
+        background-image: url('/images/PrimalCulture.png');
+        background-repeat: repeat;
+        background-position: center center;
+        background-size: 100px 100px;
+        opacity: 0.1;        
+      }
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px; /* Adjust the padding as needed */
+    border: 0px solid gray; /* Adjust the border style, width, and color as needed */
+    max-width: 337px; /* Set a specific width for the grid item */
+    max-height: 400px; /* Set a specific height for the grid item */
+    
+    align-content: flex-start;
+    
+  }  
+  .grid-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
+    z-index: 9999; /* Ensure it's on top of other elements */
+    animation: flash 2.5s infinite;
+  }
+  .overlay img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes flash {
+    0% {
+      opacity: 1;
+    }
+    45% {
+        opacity: 0;
+      }
+      47% {
+        opacity: 0;
+      }
+    50% {
+        opacity: 0;
+    }
+    52% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .item h1{
+    text-align: center;
+  }
+  .footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1b1b1b;
+    z-index: 10000;
+    padding: 10px;
+    margin: 10px 0 0 0;
+  }
+.footer h1 {text-align: center; margin: 20px 0 0 0;}
+.fa-user {
+    transform: scale(0.5); /* Adjust the scale factor as needed */
+  }
+  .footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px; /* Adjust padding as needed */    
+  }
+  .footer-icons a, .footer code a, #btn_playPause {color: var(--primary-color); text-decoration: none;}
+  .footer code a:hover {text-decoration: underline;}
+  .footer-icons i {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 10px; /* Adjust margin as needed */
+  }
+  .footer code {
+    text-align: center;
+    display: block; /* Ensure the code element behaves like a block-level element */
+    font-size: 0.7rem;
+  }
+  #btn_playPause{border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;}
