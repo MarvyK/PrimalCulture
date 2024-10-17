@@ -1,17 +1,33 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../../fonts/moolbor.ttf') format('woff2'),
+         url('../../fonts/moolbor.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  } 
 :root {
         --primary-color: #F5C507;
         --secondary-color: #CBC3C3;
+		--tertiary-color: #ffffff;
         --bg-color: #1b1b1b;
-        --font-family: 'MyCustomFont',Arial, sans-serif;
-        --font-size: 16px;
-        
+		--secondbg-color: #232428;
+        --font-family: 'MyCustomFont', Roboto, Arial, sans-serif;
+        --font-size: 20px;
+		/* Extra Colors */
+		--blackcol: #000000;
+		--hamburgercol: #b2b2b2;
+		/* Defined Heights */
+		--header-height: 130px;
     }
-
-	* {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+.secondary-color{
+	color: var(--secondary-color);
+}
    
     body {
         font-family: var(--font-family);
@@ -19,24 +35,40 @@
         color: var(--primary-color);
         background-color: var(--bg-color);
 		overflow-x: hidden;
+		padding-top: 80px;
     }    
 	header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 20px;
-		background-color: #f8f8f8;
+		background-color: var(--blackcol);
 		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: var(--header-height);
+		z-index: 1000;
 	}
+
 	.logo {
 		font-size: 24px;
 		font-weight: bold;
 	}
+	.logo img {
+		max-width: 20%;
+		height: auto;
+		padding: 20px 0 0 15px;
+		min-width: 50px;
+	}
 	.container {
 		display: flex;
-		min-height: calc(100vh - 80px); /* Subtract header height */
+		min-height: calc(100vh - var(--header-height)); /* Subtract header height */
 		width: 100%;
+		margin-top: calc(var(--header-height)/3);
 	}
+	
 	.column {
 		flex: 1;
 		display: flex;
@@ -44,16 +76,30 @@
 		align-items: center;
 		padding: 20px;
 		text-align: center;
+		background-color: var(--bg-color);
 	}
 	.column-content {
 		width: 100%;
 		max-width: 80%;
 	}
+	.sixty {
+		max-width: 100%;
+		height: auto;
+		max-height: 40vh;
+		margin: 50px 0;
+		border-radius: 50%;
+	}
+	img .one100Image {
+		max-width: 100%;
+		height: auto;
+		max-height: 100vh;
+	}
 	.column:first-child {
-		background-color: #f0f0f0;
+		background-color: var(--bg-color);
+		border-right: 1px solid var(--secondbg-color);
 	}
 	.column:last-child {
-		background-color: #e0e0e0;
+		background-color: var(--bg-color);
 	}
 	img {
 		max-width: 100%;
@@ -72,17 +118,17 @@
 		display: block;
 		width: 100%;
 		height: 2px;
-		background-color: #333;
+		background-color: var(--hamburgercol);
 		margin-bottom: 5px;
 		transition: all 0.3s ease;
 	}
 	.menu {
 		position: fixed;
-		top: 0;
+		top: 0px;
+		height: calc(100vh - 80px);
 		right: -300px;
-		width: 300px;
-		height: 100vh;
-		background-color: #fff;
+		width: 300px;		
+		background-color: var(--blackcol);
 		box-shadow: -2px 0 5px rgba(0,0,0,0.1);
 		transition: right 0.3s ease;
 		z-index: 999;
@@ -95,7 +141,7 @@
 		padding: 10px 20px;
 	}
 	.menu ul li a {
-		color: #333;
+		color: var(--tertiary-color);
 		text-decoration: none;
 	}
 	#menu-toggle {
@@ -113,6 +159,21 @@
 	#menu-toggle:checked ~ .menu-toggle span:nth-child(3) {
 		transform: rotate(-45deg) translate(7px, -6px);
 	}
+	/* Social Icons Styles */
+	.social-icons {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		margin-top: 20px;
+	}
+	.social-icons a {
+		color: #cbcbcb;
+		font-size: 24px;
+		transition: color 0.3s ease;
+	}
+	.social-icons a:hover {
+		color: #007bff;
+	}
 
 	@media (max-width: 768px) {
 		.container {
@@ -123,5 +184,15 @@
 		}
 		.column-content {
 			max-width: 100%;
+		}
+		.logo img {
+			max-width: 25%;
+			height: auto;
+			padding: 15px 0 0 15px;
+			min-width: 50px;
+		}
+		.social-icons {
+			flex-direction: row;
+			justify-content: center;
 		}
 	}
