@@ -12,8 +12,8 @@
     font-style: normal;
   } 
 :root {
-        --primary-color: #F5C507;
-        --secondary-color: #CBC3C3;
+        --primary-color: #CBC3C3;
+        --secondary-color: #F5C507;
 		--tertiary-color: #ffffff;
         --bg-color: #1b1b1b;
 		--secondbg-color: #232428;
@@ -25,10 +25,22 @@
 		/* Defined Heights */
 		--header-height: 130px;
     }
+/* ODD BALLS */
 .secondary-color{
 	color: var(--secondary-color);
 }
-   
+.left {
+	text-align: left;
+	font-size: 1.5rem;
+}
+.border-right {
+	border-right: 1px solid var(--secondbg-color);
+	margin-top: 40px;
+}
+.border-right-second  {
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	margin-top: 40px;
+}
     body {
         font-family: var(--font-family);
         font-size: var(--font-size);
@@ -64,23 +76,26 @@
 	}
 	.container {
 		display: flex;
+		flex-wrap: wrap;
 		min-height: calc(100vh - var(--header-height)); /* Subtract header height */
 		width: 100%;
 		margin-top: calc(var(--header-height)/3);
 	}
 	
-	.column {
-		flex: 1;
+	.column {		
+		flex: 0 0 48%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 20px;
 		text-align: center;
-		background-color: var(--bg-color);
+		
 	}
+	.container:nth-child(odd) {
+		background-color: var(--secondbg-color);	  }
 	.column-content {
 		width: 100%;
-		max-width: 80%;
+		max-width: 80%;		
 	}
 	.sixty {
 		max-width: 100%;
@@ -94,13 +109,7 @@
 		height: auto;
 		max-height: 100vh;
 	}
-	.column:first-child {
-		background-color: var(--bg-color);
-		border-right: 1px solid var(--secondbg-color);
-	}
-	.column:last-child {
-		background-color: var(--bg-color);
-	}
+
 	img {
 		max-width: 100%;
 		height: auto;
@@ -167,12 +176,12 @@
 		margin-top: 20px;
 	}
 	.social-icons a {
-		color: #cbcbcb;
+		color: var(--primary-color);
 		font-size: 24px;
 		transition: color 0.3s ease;
 	}
 	.social-icons a:hover {
-		color: #007bff;
+		color: var(--secondary-color);
 	}
 
 	@media (max-width: 768px) {
