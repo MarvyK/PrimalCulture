@@ -1,0 +1,127 @@
+:root {
+        --primary-color: #F5C507;
+        --secondary-color: #CBC3C3;
+        --bg-color: #1b1b1b;
+        --font-family: 'MyCustomFont',Arial, sans-serif;
+        --font-size: 16px;
+        
+    }
+
+	* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+   
+    body {
+        font-family: var(--font-family);
+        font-size: var(--font-size);
+        color: var(--primary-color);
+        background-color: var(--bg-color);
+		overflow-x: hidden;
+    }    
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+		background-color: #f8f8f8;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	}
+	.logo {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.container {
+		display: flex;
+		min-height: calc(100vh - 80px); /* Subtract header height */
+		width: 100%;
+	}
+	.column {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+		text-align: center;
+	}
+	.column-content {
+		width: 100%;
+		max-width: 80%;
+	}
+	.column:first-child {
+		background-color: #f0f0f0;
+	}
+	.column:last-child {
+		background-color: #e0e0e0;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	/* Hamburger Menu Styles */
+	.menu-toggle {
+		z-index: 1000;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+	}
+	.menu-toggle span {
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: #333;
+		margin-bottom: 5px;
+		transition: all 0.3s ease;
+	}
+	.menu {
+		position: fixed;
+		top: 0;
+		right: -300px;
+		width: 300px;
+		height: 100vh;
+		background-color: #fff;
+		box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+		transition: right 0.3s ease;
+		z-index: 999;
+	}
+	.menu ul {
+		list-style-type: none;
+		padding: 50px 0 0 0;
+	}
+	.menu ul li {
+		padding: 10px 20px;
+	}
+	.menu ul li a {
+		color: #333;
+		text-decoration: none;
+	}
+	#menu-toggle {
+		display: none;
+	}
+	#menu-toggle:checked ~ .menu {
+		right: 0;
+	}
+	#menu-toggle:checked ~ .menu-toggle span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+	#menu-toggle:checked ~ .menu-toggle span:nth-child(2) {
+		opacity: 0;
+	}
+	#menu-toggle:checked ~ .menu-toggle span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -6px);
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			flex-direction: column;
+		}
+		.column {
+			width: 100%;
+		}
+		.column-content {
+			max-width: 100%;
+		}
+	}
