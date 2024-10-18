@@ -161,6 +161,29 @@
 		opacity: 1;
 	  }
 
+	  .grid-container {
+		display: grid;
+		width: 80%;
+		grid-template-columns: repeat(4, 1fr); /* 4 columns */
+		grid-template-rows: repeat(4, 1fr); /* 4 rows */
+		gap: 20px; /* Adjust gap as needed */
+		margin: 0 auto; /* Center the container horizontally */
+
+	  }
+	  
+	  .grid-item {
+		
+		padding: 20px;
+		text-align: center;
+	  }
+	  
+	  .red-button {
+		background-color: red;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+	  }
 	/* Hamburger Menu Styles */
 	.menu-toggle {
 		z-index: 1000;
