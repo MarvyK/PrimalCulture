@@ -29,6 +29,9 @@
 .secondary-color{
 	color: var(--secondary-color);
 }
+.second-bg {
+	background-color: var(--secondbg-color);
+}
 .left {
 	text-align: left;
 	font-size: 1.5rem;
@@ -46,6 +49,7 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+	text-align: center;	
 }
 .red-button {
 	width: 80%;
@@ -60,17 +64,6 @@
 	font-size: 1.5rem;
 }
 
-
-/* .red-button {
-	background-color: #ff384b;
-    border: 1px solid transparent;
-	color: #fff;
-	padding: 10px 20px;
-	cursor: pointer;
-	width: 60%;
-	text-align: center;
-	margin: 0% auto;
-} */
     body {
         font-family: var(--font-family);
         font-size: var(--font-size);
@@ -206,7 +199,13 @@
 		padding: 20px;
 		text-align: center;
 	  }
+	  .hover-image {
+		transition: transform 0.3s ease-in-out; /* Adjust transition duration and easing as needed */
+	  }
 	  
+	  .hover-image:hover {
+		transform: scale(1.1); /* Increase size by 10% on hover */
+	  }
 
 	/* Hamburger Menu Styles */
 	.menu-toggle {
@@ -303,10 +302,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background: var(--bg-color);
 	}
 	.map-container {
 		width: 100%;
-		height: 250px;
+		height: 350px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -315,7 +315,7 @@
 	}
 	.map-box {
 		flex: 1;
-		max-width: 300px;
+		max-width: 500px;
 		height: 100%;
 		border-radius: 8px;
 		overflow: hidden;
