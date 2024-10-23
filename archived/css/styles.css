@@ -22,6 +22,7 @@
 		/* Extra Colors */
 		--blackcol: #000000;
 		--hamburgercol: #b2b2b2;
+		--redred: red;
 		/* Defined Heights */
 		--header-height: 130px;
     }
@@ -33,7 +34,7 @@
 	background-color: var(--secondbg-color);
 }
 .left {
-	text-align: left;
+	text-align: left!important;
 	font-size: 1.5rem;
 }
 .border-right {
@@ -42,7 +43,7 @@
 }
 .border-right-second  {
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
-	margin-top: 40px;
+	margin: 40px 0 20px 0;
 }
 .button-container {
     width: 100%;
@@ -55,13 +56,17 @@
 	width: 80%;
 	margin-top: 0px;
 	padding: 10px;
-	background-color: red;
+	background-color: var(--redred);
 	color: white;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	font-family: var(--font-family);
 	font-size: 1.5rem;
+}
+.red-line {
+	border-top: 0.5px solid var(--redred); height: 1px;
+	margin: 40px 0 20px 0;
 }
 
     body {
@@ -100,13 +105,22 @@
 	.container {
 		display: flex;
 		flex-wrap: wrap;
-		min-height: calc(100vh - var(--header-height)); /* Subtract header height */
+		/*min-height: calc(100vh - var(--header-height));  Subtract header height */
 		width: 100%;
 		margin-top: calc(var(--header-height)/3);
 	}
 	
 	.column {		
 		flex: 0 0 48%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+		text-align: center;
+		
+	}
+	.column2{		
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -371,12 +385,23 @@
 	.white-link:hover {
 		text-decoration: underline;
 	}
+	.contact-container {
+		display: flex;
+  flex-wrap: wrap; /* Allow columns to wrap to the next line if necessary */
+  justify-content: space-between; /* Adjust spacing between columns */
+	  }
+	  
+	  .contact-column {
+		flex: 1; /* Ensure columns share equal space */
+  padding: 20px; /* Add padding for spacing within columns */
+	  }
+	  .contact-column .fa {transform: scale(0.75); color: var(--redred);}
 	@media (max-width: 768px) {
-		.container {
+		.container, .contact-container {
 			flex-direction: column;
 			margin-top: 0;
 		}
-		.column {
+		.column, .contact-column {
 			width: 100%;
 		}
 		.column-content {

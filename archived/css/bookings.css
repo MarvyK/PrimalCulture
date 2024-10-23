@@ -1,0 +1,32 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/moolbor.ttf') format('woff2'),
+         url('../fonts/moolbor.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  } 
+  
+:root {
+    --primary-color: #F5C507;
+    --secondary-color: #CBC3C3;
+    --bg-color: #1b1b1b;
+    --font-family: 'MyCustomFont',Arial, sans-serif;
+    --font-size: 20px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    background-color: var(--bg-color);
+   
+  }
+
+.container{
+    justify-content: center;
+    background-color: #2c3345;
+}
